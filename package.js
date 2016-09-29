@@ -17,8 +17,9 @@ Npm.depends({
 });
 
 Package.onUse(function (api) {
-    api.use('npm-bcrypt@=0.7.8_2', 'server');
+    api.use('npm-bcrypt', 'server');
 
+    api.use('accounts-password', ['client', 'server']);
     api.use('accounts-base@1.0.2', ['client', 'server']);
     // Export Accounts (etc) to packages using this one.
     api.imply('accounts-base@1.0.2', ['client', 'server']);
